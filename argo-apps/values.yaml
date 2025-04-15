@@ -7,7 +7,7 @@ stages:
 applications:
   - name: springboot-hello-world
     helmChart:
-      version: 20250414.191837.0-helm
+      version: 20250415.084747.0-helm
     image:
       repository: devstackhub/springboot-hello-world
       tag:
