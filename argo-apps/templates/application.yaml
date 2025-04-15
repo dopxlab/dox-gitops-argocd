@@ -11,11 +11,11 @@ spec:
   source:
     repoURL: registry-1.docker.io/devstackhub
     chart: dox-cli
-    targetRevision: {{ $app.helmChart.version }}
+    targetRevision: 1.0.176-helm
     helm:
       parameters:
         - name: image.repository
-          value: {{ $app.image.repository }}
+          value: devstackhub/{{ $app.name }}
         - name: image.tag
           value: {{ index $app.image.tag $stage.name | quote }}
         - name: global.stage
