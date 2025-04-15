@@ -1,0 +1,15 @@
+stages:
+  - name: dev
+    namespace: dev
+  - name: test
+    namespace: test
+
+applications:
+  - name: springboot-hello-world
+    helmChart:
+      version: 20250414.191837.0-helm
+    image:
+      repository: devstackhub/springboot-hello-world
+      tag:
+        dev: "20250414.163527.0"
+        test: "20250414.163527.0"
