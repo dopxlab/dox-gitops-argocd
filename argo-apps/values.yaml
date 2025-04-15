@@ -3,7 +3,6 @@ stages:
     namespace: dev
   - name: test
     namespace: test
-
 applications:
   - name: springboot-hello-world
     image:
