@@ -4,3 +4,8 @@ stages:
   - name: test
     namespace: test
 applications:
+  - name: springboot-hello-world
+    image:
+      tag:
+        dev: "20250415.131454.0"
+        test: "20250415.131454.0"
