@@ -12,5 +12,5 @@ applications:
   - name: demo-app
     image:
       tag:
-        dev: "1.0.0"
+        dev: "1.0.1"
         test: "1.0.0"
