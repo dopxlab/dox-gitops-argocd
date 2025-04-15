@@ -8,5 +8,5 @@ applications:
   - name: springboot-hello-world
     image:
       tag:
-        dev: "20250415.101138.0"
+        dev: "20250415.103242.0"
         test: "20250414.163527.0"
