@@ -9,8 +9,3 @@ applications:
       tag:
         dev: "20250415.110246.0"
         test: "20250414.163527.0"
-  - name: demo-app
-    image:
-      tag:
-        dev: "1.0.1"
-        test: "1.0.0"
