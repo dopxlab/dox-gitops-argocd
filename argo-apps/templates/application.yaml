@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: registry-1.docker.io/devstackhub
     chart: dox-cli
-    targetRevision: 1.0.183-helm
+    targetRevision: 1.0.228-helm
     helm:
       parameters:
         - name: image.repository
