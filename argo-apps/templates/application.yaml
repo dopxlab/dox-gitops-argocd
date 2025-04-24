@@ -16,13 +16,12 @@ spec:
       parameters:
         - name: image.repository
           value: devstackhub/{{ $app.name }}
-        - name: image.tag
-          value: {{ index $app.image.tag $stage.name | quote }}
-        - name: global.stage
-          value: {{ $stage.name }}
         - name: service.name
           value: {{ $app.name }}
-                    
+        - name: global.stage
+          value: {{ $stage.name }}          
+      values: |
+        {{ . | toYaml | nindent 8 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ $stage.namespace }}
@@ -32,5 +31,5 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-{{- end }}
+  {{- end }}
 {{- end }}
