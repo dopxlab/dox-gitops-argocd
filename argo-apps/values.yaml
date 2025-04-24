@@ -5,9 +5,6 @@ stages:
     namespace: test
 applications:
   - name: springboot-hello-world
-    configmap: {}
-    secret: {}
-    pvc: {}
     image:
       tag:
-        dev: 20250424.091742.0
+        dev: 20250424.093922.0
