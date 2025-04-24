@@ -7,7 +7,7 @@ This repository demonstrates how to manage **multi-stage deployments** (like `de
 
 ## Repository Structure
 ```bash
-helm-chart/
+argo-apps/
 ├── Chart.yaml              # Helm chart definition
 ├── stages.yaml             # List of stages/environments
 ├── values-dev.yaml         # Dev-specific application values
