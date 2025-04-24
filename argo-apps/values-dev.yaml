@@ -1,4 +1,5 @@
 applications:
   - name: springboot-hello-world
     image:
-      tag: "20250424.093922.0"
+      tag:
+        dev: 20250424.192903.0
