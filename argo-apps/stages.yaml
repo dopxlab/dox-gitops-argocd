@@ -1,5 +1,0 @@
-stages:
-  - name: dev
-    namespace: dev
-  - name: test
-    namespace: test

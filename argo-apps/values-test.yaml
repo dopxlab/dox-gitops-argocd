@@ -1,3 +1,4 @@
+stage: test
 applications:
   - name: springboot-hello-world
     image:

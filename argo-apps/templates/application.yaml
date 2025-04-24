@@ -1,35 +1,34 @@
-{{- range $stage := .Values.stages }}
-  {{- range $app := $.Values.applications }}
+{{- $stage := .Values.stage }}
+{{- range $app := .Values.applications }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $stage.name }}-{{ $app.name }}
+  name: {{ $stage }}-{{ $app.name }}
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: registry-1.docker.io/devstackhub
-    chart: dox-cli
-    targetRevision: 1.0.229-helm
+    repoURL: registry.regional.devops-services.ec1.aws.aztec.cloud.allianz/adsr-7sc6s
+    chart: adsr-devops-base
+    targetRevision: 1.0.12-helm
     helm:
       parameters:
         - name: image.repository
-          value: devstackhub/{{ $app.name }}
+          value: registry.regional.devops-services.ec1.aws.aztec.cloud.allianz/adsr-7sc6s/{{ $app.name }}
         - name: service.name
           value: {{ $app.name }}
         - name: global.stage
-          value: {{ $stage.name }}          
+          value: {{ $stage }}
       values: |
-        {{ . | toYaml | nindent 8 }}
+        {{ $app | toYaml | nindent 8 }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: {{ $stage.namespace }}
+    namespace: {{ $stage }}
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  {{- end }}
 {{- end }}
