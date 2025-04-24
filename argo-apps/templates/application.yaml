@@ -9,13 +9,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: registry.regional.devops-services.ec1.aws.aztec.cloud.allianz/adsr-7sc6s
-    chart: adsr-devops-base
-    targetRevision: 1.0.12-helm
+    repoURL: registry-1.docker.io/devstackhub
+    chart: dox-cli
+    targetRevision: 1.0.229-helm
     helm:
       parameters:
         - name: image.repository
-          value: registry.regional.devops-services.ec1.aws.aztec.cloud.allianz/adsr-7sc6s/{{ $app.name }}
+          value: devstackhub/{{ $app.name }}
         - name: service.name
           value: {{ $app.name }}
         - name: global.stage
