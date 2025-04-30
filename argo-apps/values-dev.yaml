@@ -5,5 +5,4 @@ applications:
       tag: 20250424.193641.0
   - name: devops-test
     image:
-      tag:
-        dev: 20250430.064939.0
+      tag: 20250430.070823.0
